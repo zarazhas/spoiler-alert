@@ -25,4 +25,4 @@ Video.init(
     }
 )
 
-module.exports = Comment;
+module.exports = Video;
