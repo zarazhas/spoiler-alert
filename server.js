@@ -14,7 +14,7 @@ const hbs = exphbs.create({ helpers });
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-    secrect: 'Secret time gentlemen',
+    secret: 'Secret time gentlemen',
     cookie: {},
     resave: false,
     saveUninitialized: true,
@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 
-app.use("routes");
+app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
