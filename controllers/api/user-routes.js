@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { route } = require('../../../just-tech-news/controllers');
 const { User } = require('../../models');
 
 // Getting all users 

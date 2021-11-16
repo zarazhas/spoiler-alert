@@ -2,7 +2,7 @@
 const Post = require("./Post");
 const User = require("./User");
 const Vote = require("./Vote");
-/*
+
 const Comment = require("./Comment");
 const Video = require("./Video");
 const SeenMovie = require("./SeenMovie");
@@ -71,3 +71,4 @@ SeenMovie.belongsToMany(User, {
 })
 
 module.exports = { User, Post, Vote, Comment, Video, SeenMovie, UserSeenMovie}
+
