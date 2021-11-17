@@ -96,7 +96,8 @@ router.post('/login', (req, res) => {
         });
     });
 });
-//change name in the future
+
+// in order to update the movie list the route is WHILE LOGGED IN api/user/[id of the seen movie]
 router.put('/:seen_movie_id', withAuth, (req, res) => {
     UserSeenMovie.create({
         user_id: req.session.user_id,
