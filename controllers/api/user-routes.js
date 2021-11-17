@@ -1,11 +1,18 @@
 const router = require('express').Router();
-const { route } = require('../../../just-tech-news/controllers');
-const { User } = require('../../models');
+const { User, SeenMovie, UserSeenMovie } = require('../../models');
 
 // Getting all users 
 router.get('/', (req, res) => {
     User.findAll({
-        attributes: { exclude: ['password' ]}
+        attributes: { exclude: ['password']},
+        include: [
+            {
+                model: SeenMovie
+            },
+            {
+                model: UserSeenMovie
+            }
+        ]
     })
       .then(dbUserData => res.json(dbUserData))
       .catch(err => {

@@ -69,4 +69,4 @@ SeenMovie.belongsToMany(User, {
     foreignKey: "seen_movie_id"
 });
 
-module.exports = { User, Post, Vote, Comment, Video, SeenMovie, UserSeenMovie};
+module.exports = { User, Post, Vote, Comment, Video, SeenMovie, UserSeenMovie}
