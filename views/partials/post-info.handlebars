@@ -7,7 +7,7 @@
     </div>
     <div class="col align-self-center">
         {{#if comments.length}}
-        <span>{{comments.length}} Comment(s)</span>
+        <span>{{comments.length}} {{format_plural "comment" comments.length}}</span>
         {{else}}
         <span>No comments</span>
         {{/if}}
