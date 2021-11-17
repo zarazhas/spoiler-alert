@@ -37,7 +37,7 @@ User.init(
         },
         favoriteMovie: {
             type: DataTypes.STRING,
-            allowNull: true
+            allowNull: false
         },
         seenMovies: {
             type: DataTypes.STRING,

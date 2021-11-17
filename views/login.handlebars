@@ -1,14 +1,19 @@
-<div class="card">
-    <h3 class="card-header">Login</h3>
-    <form id="login-form" class="card-body">
-        <label class="form-label" for="username-login">Username</label>
-        <input id="username-login" type="text" autofocus="true" class="form-input" />
+<main class="form-signin">
+  <form id="login-form">
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
-        <label class="form-label" for="password-login">Password</label>
-        <input id="password-login" type="password" autofocus="true" class="form-input" />
+    <div class="form-floating">
+      <input type="username" class="form-control" id="username-login" placeholder="Username">
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password-login" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>
 
-        <button type="submit" class="btn">Login</button>
-    </form>
-</div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+  </form>
+</main>
 
 <script src="/javascript/login.js"></script>
+
