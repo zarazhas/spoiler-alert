@@ -7,11 +7,9 @@ router.get('/', (req, res) => {
         attributes: { exclude: ['password']},
         include: [
             {
-                model: SeenMovie
+                model: SeenMovie,
+                attributes: ["movie_name"],
             },
-            {
-                model: UserSeenMovie
-            }
         ]
     })
       .then(dbUserData => res.json(dbUserData))

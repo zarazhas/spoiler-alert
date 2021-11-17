@@ -39,9 +39,9 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        seen_movie: {
-            type: DataTypes.STRING,
-        }
+        // seen_movies: {
+        //     type: DataTypes.STRING,
+        // }
     },
     {
         hooks: {

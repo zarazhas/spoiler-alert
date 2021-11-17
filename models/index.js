@@ -3,7 +3,6 @@ const Post = require("./Post");
 const User = require("./User");
 const Vote = require("./Vote");
 const Comment = require("./Comment");
-const Video = require("./Video");
 const SeenMovie = require("./SeenMovie");
 const UserSeenMovie = require("./UserSeenMovie");
 
@@ -69,4 +68,4 @@ SeenMovie.belongsToMany(User, {
     foreignKey: "seen_movie_id"
 });
 
-module.exports = { User, Post, Vote, Comment, Video, SeenMovie, UserSeenMovie}
+module.exports = { User, Post, Vote, Comment, SeenMovie, UserSeenMovie}
