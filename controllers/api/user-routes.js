@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, SeenMovie, UserSeenMovie } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // Getting all users 
 router.get('/', (req, res) => {
@@ -8,8 +9,8 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: SeenMovie,
-                attributes: ["movie_name"],
-            },
+                attributes: ['movie_name']
+            }
         ]
     })
       .then(dbUserData => res.json(dbUserData))
@@ -24,7 +25,13 @@ router.get('/:id', (req, res) => {
         attributes: { exclude: ['password']},
         where: {
             id: req.params.id
-        }
+        },
+        include: [
+            {
+                model: SeenMovie,
+                attributes: ['movie_name']
+            }
+        ]
         // Should we include more in this like their posts?
     })
       .then(dbUserData => {
@@ -89,15 +96,13 @@ router.post('/login', (req, res) => {
         });
     });
 });
-
-router.put('/:id', (req, res) => {
-    User.update(req.body, {
-        individualHooks: true,
-        where: {
-            id: req.params.id
-        }
+//change name in the future
+router.put('/:seen_movie_id', withAuth, (req, res) => {
+    UserSeenMovie.create({
+        user_id: req.session.user_id,
+        seen_movie_id: req.params.seen_movie_id
     })
-      .then(dbUserData => {
+    .then(dbUserData => {
           if (!dbUserData) {
               res.status(404).json({ message: 'No user found with this id' });
               return;
@@ -107,7 +112,7 @@ router.put('/:id', (req, res) => {
       .catch(err => {
           console.log(err);
           res.status(500).json(err);
-      });
+    });
 });
 
 router.delete('/:id', (req, res) => {
