@@ -160,3 +160,8 @@ main {
   .status-upload form button > i {
   margin-right: 7px;
   }
+
+  .link {
+    text-decoration: none;
+    color: inherit;
+  }
