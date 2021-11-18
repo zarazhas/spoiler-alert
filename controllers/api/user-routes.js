@@ -72,11 +72,12 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
-            email: req.body.email
+            // changed this from email to username
+            username: req.body.username
         }
     }).then(dbUserData => {
           if (!dbUserData){
-              res.status(400).json({ message: 'No user with that email address!' });
+              res.status(400).json({ message: 'No user with that ussername!' });
               return;
           }
           const validPassword = dbUserData.checkPassword(req.body.password);
@@ -92,11 +93,12 @@ router.post('/login', (req, res) => {
         req.session.username = dbUserData.username;
         req.session.loggedIn = true;
 
-        res.json({ user: dbUserData, message: 'You are now logged!' });
+        res.json({ user: dbUserData, message: 'You are now logged in!' });
         });
     });
 });
-//change name in the future
+
+// in order to update the movie list the route is WHILE LOGGED IN api/user/[id of the seen movie]
 router.put('/:seen_movie_id', withAuth, (req, res) => {
     UserSeenMovie.create({
         user_id: req.session.user_id,

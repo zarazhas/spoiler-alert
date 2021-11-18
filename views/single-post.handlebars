@@ -1,0 +1,34 @@
+{{> post-info post}}
+
+{{#if loggedIn}}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="widget-area no-padding blank">
+                <div class="status-upload">
+                    <form class="comment-form" id="comment-form">
+                        <textarea name="comment-body" placeholder="Write your comment here"></textarea>
+                        <button type="submit" class="btn btn-success green"> Submit</button>
+                    </form>
+                </div><!-- Status Upload  -->
+            </div><!-- Widget Area -->
+        </div>
+
+    </div>
+</div>
+
+{{> comments post.comments}}
+{{else}}
+<div class="container">
+    <div class="row">
+        <h1 class="animate__animated animate__lightSpeedInRight">
+            If you want to see comments, you're going to have to log in!
+        </h1>
+    </div>
+</div>
+
+{{/if}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
