@@ -95,6 +95,10 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
 // route to render a new post
 router.get('/new', (req, res) => {
+    if (!req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
     res.render('new-post');
 });
 
