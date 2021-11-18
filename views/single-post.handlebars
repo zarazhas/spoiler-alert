@@ -1,27 +1,46 @@
-{{> post-info post}}
+<div class="container">
+    {{> post-info post}}
+</div>
 
 {{#if loggedIn}}
 <div class="container">
     <div class="row">
         <div class="col">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="myCheck" onClick="myFunction()" role="switch" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Click if you have seen this</label>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="myCheck" onClick="myFunction()" role="switch"
+                    id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Click if you have seen this</label>
+            </div>
         </div>
     </div>
+</div>
+<div class="container" id="contentBox" style="display: none;">
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>{{post.content}}</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="comment-form" style="display:none">
+    <div class="row">
         <div class="col">
             <div class="widget-area no-padding blank">
                 <div class="status-upload">
-                    <form class="comment-form" id="comment-form" style="display:none">
+                    <form class="comment-form">
                         <textarea name="comment-body" placeholder="Write your comment here"></textarea>
                         <button type="submit" class="btn btn-success green"> Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
+
+
 
 {{> comments post.comments}}
 {{else}}

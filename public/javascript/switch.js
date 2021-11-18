@@ -4,14 +4,17 @@ function myFunction() {
     // Get the output text
     var text = document.getElementById("text");
     var commentBox = document.getElementById("comment-form");
+    var contentBox = document.getElementById("contentBox");
   
     // If the checkbox is checked, display the output text
     if (checkBox.checked == true){
       text.style.display = "block";
       commentBox.style.display = "block";
+      contentBox.style.display = "block";
     } else {
       text.style.display = "none";
       commentBox.style.display = "none";
+      contentBox.style.display = "none";
     }
   }
 

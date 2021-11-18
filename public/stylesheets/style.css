@@ -38,7 +38,8 @@ main {
 }
 
 .row:nth-child(even) {
-  background-color: grey;
+  background-color: #007bff;
+  color: #f8f9fa;
 }
 
 .widget-area.blank {
