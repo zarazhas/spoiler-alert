@@ -38,7 +38,8 @@ main {
 }
 
 .row:nth-child(even) {
-  background-color: grey;
+  background-color: #007bff;
+  color: #f8f9fa;
 }
 
 .widget-area.blank {
@@ -159,4 +160,9 @@ main {
   }
   .status-upload form button > i {
   margin-right: 7px;
+  }
+
+  .link {
+    text-decoration: none;
+    color: inherit;
   }

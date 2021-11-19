@@ -69,6 +69,56 @@ router.post('/', (req, res) => {
    });
 });
 
+/*
+router.get('/please', withAuth, (req, res) => {
+    User.findOne({
+        where: {
+            id: req.session.user_id
+        }
+    })
+    .then(dbUserData => {
+        req.session.sav(() => {
+            req.session.haveseen = 1;
+
+            res.json(dbUserData);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+
+router.get('/test', function(req, res) {
+    if(!req.session.haveseen){
+        req.session.save(() => {
+            req.session.haveseen =  1;
+
+            res.json({ message: 'torment unedning'});
+        });
+    } else {
+        res.json({ message: 'req.session.haveseen' });
+    }
+    
+});
+
+router.post('/have-seen', withAuth, function(req, res, next) {
+    if(!req.session.haveseen) {
+        req.session.save(() => {
+            req.session.haveseen = req.body.post_id;
+
+            res.json({ message: 'You have seen this movie. '});
+        });
+    } else {
+        req.session.haveseen = req.body.post_id;
+
+        res.json({ message: 'free me from this torment.' });
+    }
+
+});
+*/
+
 router.post('/login', (req, res) => {
     User.findOne({
         where: {

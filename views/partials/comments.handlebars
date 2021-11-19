@@ -1,15 +1,16 @@
-<div class="comments">
+<div class="container" id="text" style="display:none">
   {{#each this}}
-    <div class="card">
-        <h3 class="card-header"></h3>
-        <section class="comment card-body">
-            <div class="text">
-                {{comment_text}}
-            </div>
-            <div class="meta">
-                -{{user.username}}, {{format_date created_at}}
-            </div>
-        </section>
+  <div class="card">
+    <div class="card-header">
+      {{user.username}}
     </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>{{comment_text}}</p>
+        <footer class="blockquote-footer">commented on <cite title="Source Title">{{format_date created_at}}</cite>
+        </footer>
+      </blockquote>
+    </div>
+  </div>
   {{/each}}
 </div>
