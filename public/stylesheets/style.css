@@ -1,7 +1,12 @@
 html,
 body {
   height: 100%;
-  background-color: #f5f5f5;
+  background: url('/images/filmstrip.jpeg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
 }
 
 main {
@@ -25,21 +30,23 @@ main {
   z-index: 2;
 }
 
-/* .form-signin input[type="username"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-} */
-
 .form-signin input {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
 
-.row:nth-child(even) {
+#posts:nth-child(even) {
   background-color: #007bff;
   color: #f8f9fa;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+
+#posts:nth-child(odd) {
+  background-color: #f8f9fa;
+  border-radius: 25px;
+  opacity: 0.9;
 }
 
 .widget-area.blank {
@@ -168,6 +175,5 @@ main {
   }
 
   #logo {
-    font-family: Actor;
     font-size: 2rem;
   }
