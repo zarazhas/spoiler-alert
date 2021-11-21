@@ -150,7 +150,7 @@ router.get('/posts-comments', (req, res) => {
                 return;
             }
             const post = dbPostData.get({ plain: true });
-            res.render('posts-comments', { posst, loggedIn: req.session.loggedIn });
+            res.render('posts-comments', { post, loggedIn: req.session.loggedIn });
         })
         .catch(err => {
             console.log(err);

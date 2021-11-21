@@ -166,3 +166,8 @@ main {
     text-decoration: none;
     color: inherit;
   }
+
+  #logo {
+    font-family: Actor;
+    font-size: 2rem;
+  }
