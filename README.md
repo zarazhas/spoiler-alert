@@ -83,6 +83,8 @@ We may not be able to prevent the entire internet from spoilers, but at least we
 
   ## Demo
 
+  Please click the link below to see a video of the application in action.
+
   [Screen Castify](https://watch.screencastify.com/v/TdyhFQAv9K7EhxSfBQAD)
 
   ## Link
