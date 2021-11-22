@@ -1,0 +1,29 @@
+<form class="card-body edit-post-form">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="mb-3">
+                <label for="post-title" class="form-label">Movie or Show Title</label>
+                <input type="text" id="post-title" name="post-title" value="{{post.title}}" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Post Content</label>
+                <textarea rows="5" type="text" class="form-control" name="content" value="{{post.content}}"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-auto">
+                <button type="submit" class="btn btn-success" id="edit-post-form">Update Post</button>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-danger" id="delete-post-btn">Delete Post</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
