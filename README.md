@@ -1,4 +1,4 @@
-# spoiler-alert
+# Spoiler Alert
 
   ![](https://img.shields.io/badge/license-MIT-blue)
 
