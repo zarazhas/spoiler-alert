@@ -17,7 +17,7 @@ We may not be able to prevent the entire internet from spoilers, but at least we
   3. [Acceptance Criteria](#acceptance-criteria)
   4. [Demo](#demo)
   5. [Link to Deployed Application](#link)
-  6. [Technology](#technology)
+  6. [Technology](#technology-used)
   7. [Future Development](#future-development)
   8. [Collaborators](#collaborators)
   9. [Questions](#questions)
