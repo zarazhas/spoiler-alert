@@ -122,7 +122,7 @@ We may not be able to prevent the entire internet from spoilers, but at least we
 
   ## Questions
 
-  If you have any questions regarding this project, you can reach us at our GitHub accountsat:
+  If you have any questions regarding this project, you can reach us at our GitHub accounts:
   <br />
   Github: [rmartin1985](https://github.com/rmartin1985)
   <br />
