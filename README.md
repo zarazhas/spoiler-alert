@@ -18,9 +18,10 @@ We may not be able to prevent the entire internet from spoilers, but at least we
   4. [Demo](#demo)
   5. [Link to Deployed Application](#link)
   6. [Technology](#technology)
-  7. [Collaborators](#collaborators)
-  8. [Questions](#questions)
-  9. [License](#license)
+  7. [Future Development](#future-development)
+  8. [Collaborators](#collaborators)
+  9. [Questions](#questions)
+  10. [License](#license)
   
 
   ## Installation
@@ -112,6 +113,14 @@ We may not be able to prevent the entire internet from spoilers, but at least we
   **9. [JQuery](https://jquery.com/)**
 
   **10. [FontAwesome](https://fontawesome.com/)**
+
+  ## Future Development
+  This was a group project done in 2 weeks for our Coding Bootcamp. If we had more time and resources, we would like to improve these features in a future development of the app.
+
+  * We would like to restrict the access of a post based on if the user had seen the movie instead of having the button to open up the comments
+  * Create a more robust profile page to include the option to add a profile picture and populate the movies the user has and hasn't seen
+  * Direct them to a website that will let them know which platform is streaming that title so that they can watch it. 
+  * Connect to a third party API to populate movie and tv show images instead of the film roll placeholder image. 
 
   ## Collaborators
 
