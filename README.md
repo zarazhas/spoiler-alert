@@ -135,7 +135,7 @@ We may not be able to prevent the entire internet from spoilers, but at least we
   <br />
   Github: [rmartin1985](https://github.com/rmartin1985)
   <br />
-  Github: [evalecillos](https://github.com/evalecillos)
+  Github: [zarazhas](https://github.com/zarazhas)
   <br />
   Github: [RayceWheat](https://github.com/RayceWheat)
   <br />
